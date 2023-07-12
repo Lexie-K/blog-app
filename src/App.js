@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
@@ -8,7 +8,7 @@ import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename="/signup">
       <Routes>
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/details/:id" element={<DetailsPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

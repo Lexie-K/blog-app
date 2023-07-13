@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
@@ -8,7 +8,7 @@ import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
 
 function App() {
   return (
-    <HashRouter basename="/signup">
+    <HashRouter basename="/">
       <Routes>
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
